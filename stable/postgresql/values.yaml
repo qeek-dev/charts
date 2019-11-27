@@ -120,6 +120,11 @@ postgresqlUsername: postgres
 ##
 # postgresqlDatabase:
 
+## Create multiple databases
+## ref: https://github.com/mrts/docker-postgresql-multiple-databases
+##
+# postgresqlDatabases: authnsvc,authzsvc
+
 ## PostgreSQL data dir
 ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md
 ##
