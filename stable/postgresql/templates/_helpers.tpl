@@ -149,6 +149,17 @@ Return PostgreSQL created database
 {{- end -}}
 
 {{/*
+Return PostgreSQL created databases
+*/}}
+{{- define "postgresql.databases" -}}
+{{- if .Values.global.postgresql.postgresqlDatabases }}
+    {{- .Values.global.postgresql.postgresqlDatabases -}}
+{{- else if .Values.postgresqlDatabases -}}
+    {{- .Values.postgresqlDatabases -}}
+{{- end -}}
+{{- end -}}
+
+{{/*
 Return the proper image name to change the volume permissions
 */}}
 {{- define "postgresql.volumePermissions.image" -}}
